@@ -13,7 +13,10 @@
         <br>
         <input type="number" id="n2" placeholder="0">
         <br>
-        <button id="btnCalc">Calcular</button>
+        <button onclick="somar()">+</button>
+        <button onclick="sub()">-</button>
+        <button onclick="mult()">*</button>
+        <button onclick="div()">/</button>
         <br>
         <input type="number" id="result" disabled>
     </fieldset>
@@ -21,20 +24,33 @@
     <script>
         var n1      = document.getElementById("n1");
         var n2      = document.getElementById("n2");
+        var resultado = document.getElementById("result");
+        
         var btnCalc = document.getElementById("btnCalc");
-        var resultado = document.getElementById('result')
 
-        function somar(x,y){
-            return x + y;    
+
+        function somar(){
+            x = parseFloat(n1.value);
+            y = parseFloat(n2.value);
+            resultado.value = x + y;  
         }
 
-        btnCalc.onclick = function(){
-            a = parseFloat(n1.value);
-            b = parseFloat(n2.value);
-            resultado.value = somar(a,b);
-            resultado.style.color = 'red';
-            resultado.style.background = 'green';
+        function sub(){
+            x = parseFloat(n1.value);
+            y = parseFloat(n2.value);
+            resultado.value = x - y;    
         }
+        function mult(x,y){
+            x = parseFloat(n1.value);
+            y = parseFloat(n2.value);
+            resultado.value = x * y;    
+        }
+        function div(x,y){
+            x = parseFloat(n1.value);
+            y = parseFloat(n2.value);
+            resultado.value = x / y;    
+        }
+
     </script>
 </body>
 </html>
