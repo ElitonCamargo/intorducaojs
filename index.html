@@ -13,7 +13,7 @@
         <br>
         <input type="number" id="n2" placeholder="0">
         <br>
-        <button id="brnCalc">Calcular</button>
+        <button id="btnCalc">Calcular</button>
         <br>
         <input type="number" id="result" disabled>
     </fieldset>
@@ -21,14 +21,14 @@
     <script>
         var n1      = document.getElementById("n1");
         var n2      = document.getElementById("n2");
-        var brnCalc = document.getElementById("brnCalc");
+        var btnCalc = document.getElementById("btnCalc");
         var resultado = document.getElementById('result')
 
         function somar(x,y){
             return x + y;    
         }
 
-        brnCalc.onclick = function(){
+        btnCalc.onclick = function(){
             a = parseFloat(n1.value);
             b = parseFloat(n2.value);
             resultado.value = somar(a,b);
